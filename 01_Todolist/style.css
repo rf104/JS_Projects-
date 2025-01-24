@@ -1,0 +1,12 @@
+body{
+    background-color: #424242;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10vh;
+}
+#store{
+    background-color: antiquewhite;
+    width: 70vh;
+}
