@@ -8,14 +8,21 @@ btn.addEventListener('click',(e)=>{
     // li.appendChild(document.createTextNode(task))
     // st.appendChild(li)
     if(task!=""){
-        
+    
+    const btnCreat = document.createElement('button');
+    btnCreat.textContent = "Done";
+
+
     const div = document.createElement('div');
     div.appendChild(document.createTextNode(task))
+    div.appendChild(btnCreat);
+    div.setAttribute('id','taskDiv');
+    div.style.display = "flex"
     div.style.backgroundColor = 'gray';
     div.style.borderRadius = '15px';
     div.style.padding = '12px'
     div.style.marginTop = '12px'
     st.appendChild(div)
-
+    task = ""
     }
 })
