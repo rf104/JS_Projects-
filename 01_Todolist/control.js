@@ -1,8 +1,18 @@
 const btn = document.querySelector('#add')
 let record = [];
 let flg = false;
+const Inputfield = document.getElementById('taskIn');
+Inputfield.addEventListener('keypress',(e)=>{
+    if(e.key === 'Enter'){
+        e.preventDefault();
+        btn.click();
+    }
+})
+
+
 btn.addEventListener('click',(e)=>{
     const task = document.getElementById('taskIn').value.trim();
+    
     const st = document.getElementById('store')
     // st.innerHTML = `<h1>${task}</h1>`
     // const li = document.createElement('li')
@@ -21,7 +31,9 @@ btn.addEventListener('click',(e)=>{
         btnCreat.textContent = "Done";
         btnCreat.setAttribute('id','btnIn');
         // btnCreat.classList.add('btnIn')
+
         btnCreat.addEventListener('click',(e)=>{
+            e.preventDefault();
             console.log('Done btn clicked!');
             // console.log(btnCreat.parentNode.parentNode.childNodes[0])
             // console.log(typeof btnCreat.parentNode.parentNode.childNodes[0].textContent)
@@ -38,6 +50,14 @@ btn.addEventListener('click',(e)=>{
         const btnEdt = document.createElement('button');
         btnEdt.textContent = "Edit"
         btnEdt.setAttribute('id','btnEdt')
+        btnEdt.addEventListener('click',(e)=>{
+            console.log(e.target)
+            // e.target.parentNode.parentNode.append(document.createElement('input'));
+            const edtTxt = prompt("Enter Your Modified Task");
+            record[record.indexOf(btnEdt.parentNode.parentNode.childNodes[0].textContent)] =edtTxt ;
+            e.target.parentNode.parentNode.childNodes[0].textContent = edtTxt;
+            // e.target.append(document.createElement('input'))
+        })
 
         btnDiv.append(btnCreat);
         btnDiv.append(btnEdt);
