@@ -1,0 +1,20 @@
+
+body{
+    background-color: #424242;
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px;
+}
+
+.mainPart{
+    display: flex;
+    flex-direction: row;
+    gap: 2px;
+}
+
+button{
+    height: 5vh;
+    width: 10vh;
+}
