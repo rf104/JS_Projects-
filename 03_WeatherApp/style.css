@@ -22,8 +22,21 @@ body{
 }
 
 #DivTemplate{
-    background-color: burlywood;
+    background-color: rgb(255, 216, 164);
     border-radius: 4px;
     width: 40vh;
     padding: 4px;
+}
+
+#fieldIN{
+    width: 40vh;
+    height: 5vh;
+    border-radius: 4px;
+    opacity: 75%;
+}
+
+button{
+    width: 10vh;
+    height: 5vh;
+    background-color: green;
 }

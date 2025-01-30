@@ -26,7 +26,7 @@ fetch(`http://api.weatherstack.com/current?access_key=${access_key}&query=${quer
 
         let div = document.createElement('div')
         div.setAttribute('id',"DivTemplate")
-        div.textContent = `The Tempreature of ${query} is ${data.current.temperature} Degree Celcius Country : ${data.location.country} \n Time : ${data.current.
+        div.textContent = `The Tempreature of ${query} is ${data.current.temperature} Degree Celcius \n Country : ${data.location.country} \n Time : ${data.current.
             observation_time}`
         document.getElementById('outField').appendChild(div);
 
