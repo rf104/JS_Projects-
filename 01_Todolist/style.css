@@ -43,3 +43,7 @@ button{
     gap: 2px;
     /* background-color: aqua; */
 }
+footer{
+    padding-top: 70vh;
+    /* /background-color: black; */
+}
